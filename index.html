@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borrowed Buddies</title>
+    
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <script>
+        // Customizing Tailwind with color palette
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'bb-dark-blue': '#1b998bff',
+                        'bb-orange': '#f06c2dff',
+                        'bb-light-blue': '#6d9eebff',
+                        'bb-off-white': '#f7f4eeff',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            padding-top: 80px;
+        }
+        section[id] {
+        scroll-margin-top: 100px; /* With this value */
+    }
+    </style>
+</head>
+<body class="bg-bb-off-white text-gray-800">
+
+    <!-- Header & Navigation Bar -->
+    <header class="bg-white shadow-md fixed top-0 left-0 w-full z-10">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo Image -->
+                <a href="#about">
+                    <img src="img/logo.png" alt="Borrowed Buddies Logo" class="h-20">
+                </a>
+                <!-- Navigation Links -->
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="#about" class="text-gray-600 hover:text-bb-orange">About</a>
+                    <a href="#service" class="text-gray-600 hover:text-bb-orange">Services</a>
+                    <a href="#meet-the-buddies" class="text-gray-600 hover:text-bb-orange">Meet The Buddies</a>
+                    <a href="#testimonials" class="text-gray-600 hover:text-bb-orange">Testimonials</a>
+                    <a href="#contact" class="bg-bb-orange hover:bg-opacity-90 text-white font-bold py-2 px-4 rounded-lg">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="container mx-auto px-6 py-8">
+
+        <!-- About Section -->
+        <section id="about" class="min-h-screen flex items-center">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+                <!-- Image Column -->
+                <div>
+                    <img src="https://placehold.co/600x600/6d9eeb/f7f4ee?text=Image" alt="N/A" class="rounded-lg shadow-2xl w-full">
+                </div>
+                <!-- Text Column -->
+                <div class="text-center">
+                    <h1 class="text-5xl md:text-6xl font-bold mb-4 text-bb-dark-blue">Welcome to Borrowed Buddies</h1>
+                    <p class="text-xl text-gray-700">Find your social butterfly!.</p>
+                    <p class="mt-4 text-gray-600">Borrow a Buddy for accesible companionship on demand!  </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Service Section -->
+        <section id="service" class="min-h-screen py-20">
+            <h2 class="text-4xl font-bold text-center mb-12 text-bb-dark-blue">How It Works</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white p-8 rounded-lg shadow-lg text-center">
+                    <h3 class="text-2xl font-bold mb-4 text-bb-light-blue">Find a Buddy</h3>
+                    <p>Browse profiles of amazing people in your area who are available for adventures, support, or just a cozy afternoon.</p>
+                </div>
+                <!-- Service 2 -->
+                <div class="bg-white p-8 rounded-lg shadow-lg text-center">
+                    <h3 class="text-2xl font-bold mb-4 text-bb-light-blue">Schedule a Date</h3>
+                    <p>Connect with strangers through our secure messaging system to arrange a perfect time and place to meet your new buddy.</p>
+                </div>
+                <!-- Service 3 -->
+                <div class="bg-white p-8 rounded-lg shadow-lg text-center">
+                    <h3 class="text-2xl font-bold mb-4 text-bb-light-blue">Share the Love</h3>
+                    <p>Enjoy the happiness a person brings without the long-term commitment. Perfect for busy schedules or just for fun!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Meet The Buddies Section -->
+        <section id="meet-the-buddies" class="min-h-screen py-20">
+            <h2 class="text-4xl font-bold text-center mb-12 text-bb-dark-blue">Meet The Buddies</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Buddy 1 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://placehold.co/600x400/6d9eeb/FFFFFF?text=Buddy" alt="A friendly dog named Buddy" class="w-full h-48 object-cover">
+                    <div class="p-6 text-center">
+                        <h3 class="text-2xl font-bold mb-2">Jeff</h3>
+                        <p class="mb-4">A 23yr old who loves an adventure.</p>
+                        <a href="#" class="bg-bb-orange hover:bg-opacity-90 text-white font-bold py-2 px-4 rounded-lg inline-block">Borrow Buddy!</a>
+                    </div>
+                </div>
+                <!-- Buddy 2 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://placehold.co/600x400/6d9eeb/FFFFFF?text=Luna" alt="A calm cat named Luna" class="w-full h-48 object-cover">
+                    <div class="p-6 text-center">
+                        <h3 class="text-2xl font-bold mb-2">Luna</h3>
+                        <p class="mb-4">A calm and cool 28yr old who is perfect for a relaxing day indoors.</p>
+                        <a href="#" class="bg-bb-orange hover:bg-opacity-90 text-white font-bold py-2 px-4 rounded-lg inline-block">Borrow Luna!</a>
+                    </div>
+                </div>
+                <!-- Buddy 3 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://placehold.co/600x400/6d9eeb/FFFFFF?text=Rocky" alt="An energetic puppy named Rocky" class="w-full h-48 object-cover">
+                    <div class="p-6 text-center">
+                        <h3 class="text-2xl font-bold mb-2">Sarah</h3>
+                        <p class="mb-4">A supportive and comforting individual.</p>
+                        <a href="#" class="bg-bb-orange hover:bg-opacity-90 text-white font-bold py-2 px-4 rounded-lg inline-block">Borrow Rocky!</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="min-h-screen py-20">
+            <h2 class="text-4xl font-bold text-center mb-12 text-bb-dark-blue">What People Are Saying</h2>
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <p class="italic mb-4">"Borrowed Buddies is amazing! I get a temporary friend whenever I want, and it's so easy to use. I met the sweetest girl last weekend."</p>
+                    <p class="font-bold text-right text-bb-light-blue">- Sarah J.</p>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <p class="italic mb-4">"As someone who's spontaneous, I love knowing I always have somoene with me when I'm bored. The people I've met are all so friendly and responsible."</p>
+                    <p class="font-bold text-right text-bb-light-blue">- Mike R.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="min-h-screen py-20">
+            <h2 class="text-4xl font-bold text-center mb-12 text-bb-dark-blue">Get In Touch</h2>
+            <div class="max-w-xl mx-auto bg-white p-8 rounded-lg shadow-lg">
+                <form>
+                    <div class="mb-4">
+                        <label for="name" class="block mb-2 font-bold">Name</label>
+                        <input type="text" id="name" class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-bb-light-blue">
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="block mb-2 font-bold">Email</label>
+                        <input type="email" id="email" class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-bb-light-blue">
+                    </div>
+                    <div class="mb-4">
+                        <label for="message" class="block mb-2 font-bold">Message</label>
+                        <textarea id="message" rows="4" class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-bb-light-blue"></textarea>
+                    </div>
+                    <button type="submit" class="bg-bb-dark-blue hover:bg-opacity-90 text-white font-bold py-3 px-6 rounded-lg w-full">Send Message</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>
