@@ -24,7 +24,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
     
     <script>
-        // Customizing Tailwind with color palette
+        // Customizing Tailwind w/ color palette
         tailwind.config = {
             theme: {
                 extend: {
@@ -64,7 +64,8 @@
                 <a href="#about">
                     <img src="img/logo.png" alt="Borrowed Buddies Logo" class="h-20">
                 </a>
-                <!-- Navigation Links -->
+
+                <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center space-x-6">
                     <a href="#about" class="text-gray-600 hover:text-bb-orange">About</a>
                     <a href="#service" class="text-gray-600 hover:text-bb-orange">Services</a>
@@ -72,6 +73,22 @@
                     <a href="#testimonials" class="text-gray-600 hover:text-bb-orange">Testimonials</a>
                     <a href="#contact" class="bg-bb-orange hover:bg-opacity-90 text-white font-bold py-2 px-4 rounded-lg">Contact</a>
                 </div>
+
+                <!-- Mobile Menu -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-800 focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden mt-4">
+                <a href="#about" class="block py-2 px-4 text-sm text-gray-600 hover:bg-bb-off-white rounded">About</a>
+                <a href="#service" class="block py-2 px-4 text-sm text-gray-600 hover:bg-bb-off-white rounded">Services</a>
+                <a href="#meet-the-buddies" class="block py-2 px-4 text-sm text-gray-600 hover:bg-bb-off-white rounded">Meet The Buddies</a>
+                <a href="#testimonials" class="block py-2 px-4 text-sm text-gray-600 hover:bg-bb-off-white rounded">Testimonials</a>
+                <a href="#contact" class="block py-2 px-4 text-sm text-gray-600 hover:bg-bb-off-white rounded">Contact</a>
             </div>
         </nav>
     </header>
@@ -85,8 +102,8 @@
                 <!-- Text Column -->
                 <div class="text-center">
                     <h1 class="text-5xl md:text-6xl font-bold mb-4 text-bb-dark-blue">Welcome to Borrowed Buddies</h1>
-                    <p class="text-xl text-gray-700">Find your social butterfly!.</p>
-                    <p class="mt-4 text-gray-600">Borrow a Buddy for accesible companionship on demand!  </p>
+                    <p class="text-xl text-gray-700">Find your social butterfly!</p>
+                    <p class="mt-4 text-gray-600">Need a friend for an adventure, a companion for an event, or just a friendly face for coffee? Borrowed Buddies is a safe and easy platform connecting you with like-minded people for on-demand companionship. Create genuine connections, one buddy at a time. </p>
                 </div>
                 <!-- Image Column -->
                 <div>
@@ -191,6 +208,24 @@
         </section>
 
     </main>
+
+    <!-- JavaScript for the Mobile Menu -->
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Optional: Close the menu when a link is clicked
+        const navLinks = mobileMenu.querySelectorAll('a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
 
 </body>
 </html>
